@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using Castle.MicroKernel.Registration;
+﻿using Castle.MicroKernel.Registration;
 using Castle.Windsor;
+using nlog.Extensions.Tests.Helpers;
 using NLog;
 using NLog.Config;
 using NLog.Layouts;
@@ -40,38 +40,5 @@ namespace nlog.Extensions.Tests
             var s = _memoryTarget.Logs[0];
             s.ShouldBe("test context");
         }
-    }
-
-    public class TestLogContextResolver : ILogContextResolver
-    {
-        public KeyValuePair<string, string>[] GetContexts()
-        {
-            return new[] {new KeyValuePair<string, string>("context", "context")};
-        }
-    }
-
-    public class A
-    {
-        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
-
-        public virtual void B()
-        {
-            Logger.Debug("test");
-        }
-
-        public virtual F C(D d)
-        {
-            return new F {G = "g"};
-        }
-    }
-
-    public class D
-    {
-        public string E { get; set; }
-    }
-
-    public class F
-    {
-        public string G { get; set; }
     }
 }

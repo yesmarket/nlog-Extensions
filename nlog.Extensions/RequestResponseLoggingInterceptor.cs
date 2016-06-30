@@ -1,9 +1,9 @@
 using System;
 using System.Linq;
-using Castle.Core.Logging;
 using Castle.DynamicProxy;
 using Microsoft.Practices.ServiceLocation;
 using Newtonsoft.Json;
+using NLog;
 
 namespace nlog.Extensions
 {
