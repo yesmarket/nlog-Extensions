@@ -30,7 +30,6 @@ namespace nlog.Extensions.Tests
             
             _container = new WindsorContainer();
             _container.Register(Component.For<ILogContextResolver>().ImplementedBy<TestLogContextResolver>());
-            _container.Register(Component.For<ILoggerFactory>().ImplementedBy<DefaultLoggerFactory>());
             _container.Register(Component.For<RequestResponseLoggingInterceptor>());
             _container.Register(Component.For<A>().Interceptors<RequestResponseLoggingInterceptor>());
             ServiceLocator.SetLocatorProvider(() => new WindsorServiceLocator(_container));

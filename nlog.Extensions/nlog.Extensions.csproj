@@ -58,12 +58,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DefaultJsonSerializer.cs" />
-    <Compile Include="DefaultLoggerFactory.cs" />
     <Compile Include="IJsonSerializer.cs" />
     <Compile Include="IJsonSerializer`1.cs" />
     <Compile Include="ILogContext.cs" />
     <Compile Include="ILogContextResolver.cs" />
-    <Compile Include="ILoggerFactory.cs" />
     <Compile Include="LogContext.cs" />
     <Compile Include="LogContextInterceptor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
